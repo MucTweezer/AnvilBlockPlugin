@@ -1,0 +1,23 @@
+name: AnvilBlockPlugin
+version: 1.0.0
+description: This plugin creates anvil blocks that allow the repairing of tools and armour.
+author: MucTweezer
+
+main: me.MucTweezer.anvilblockplugin.AnvilBlockPlugin
+database: false
+
+commands:
+  anvilrecipes:
+    description: <item|set|enableenchanting|disableenchanting>
+    aliases: ar
+    permission: anvilrecipes.anvilrecipes
+    usage: Syntax error! Only players can call this method and only with one argument.
+
+permissions:
+  anvilrecipes.*:
+    description: Gives access to all AnvilBlockPlugin commands
+    children:
+      anvilrecipes.anvilrecipes: true
+  anvilrecipes.anvilrecipes:
+    description: Allows the use of the anvilrecipes command
+    default: op
